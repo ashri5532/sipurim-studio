@@ -17,6 +17,17 @@ Channel: TikTok **@sipurim.shel.achim** ("סיפורים של אחים 🔑"), Y
 - Explainers/news-style videos were weak. Shares are our weak point → always include a "תייגו את החבר ש…" beat.
 - End sequence: vote card → "תייגו…" → "+ עקבו כדי לא לפספס את פרק X".
 
+## Variety — Ashri wants NEW things, not the same video every day
+Rotate formats; never the same format two days in a row (check state/log.md). Keep the 1/2 vote ending in all of them.
+1. **"בעולם הזה…"** — one weird rule changes society (everyone gets their lifetime money at 18, lies show on your forehead, you can see how many days someone has left…).
+2. **Interactive series** — episode N, audience decides episode N+1 (only one open series at a time).
+3. **Street / crime / police drama** — fictional, tense, twist ending (Ashri asked for these).
+4. **Emotional family story** — parents, siblings, grandpa; quiet twist.
+5. **"מה היית עושה?" rapid dilemma** — 3 fast dilemmas in one video, each 1/2, last one the hardest.
+6. **POV / second person thriller** — "אתה מתעורר ב…", "קיבלת הודעה מ…".
+7. **Experiment:** one new format per week that we have not tried (from outlier research). Label it in log.md as an experiment so the analyst can judge it.
+Also vary: setting (army, school, work, abroad, wedding, hospital), characters, color palette of the cover, music (soft/noir). New visual props are welcome — add helpers to the episode's scenes.js.
+
 ## Pipeline (one video ≈ 25 vidIQ credits)
 Work in a copy of this repo. Episode folder: `episodes/<slug>/`.
 1. **Research (cheap):** `vidiq_tiktok_profile_videos` on our account (last 10 videos: views, likes, comments, shares) + one `vidiq_instagram_tiktok_outlier_search` for a format idea. Check `state/series.json` for an open interactive series: if a vote is open and ≥18h old, read the comments (`vidiq_tiktok_comment_list`), count 1 vs 2 and make the next episode.
