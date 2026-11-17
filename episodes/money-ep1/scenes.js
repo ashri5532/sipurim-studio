@@ -1,0 +1,41 @@
+const SC={};
+const roomBg=(warm)=>{const g=X.createLinearGradient(0,0,0,H);g.addColorStop(0,warm?'#3b2a22':'#22283a');g.addColorStop(.78,warm?'#5a4032':'#323a52');g.addColorStop(.78,'#2a1f18');g.addColorStop(1,'#140f0b');X.fillStyle=g;X.fillRect(-200,-200,W+400,H+400)};
+function cake(x,y,s,t){X.save();X.translate(x,y);X.scale(s,s);X.fillStyle='#f6e2c8';rr(-170,-120,340,120,20);X.fill();X.fillStyle='#e84393';rr(-170,-140,340,40,20);X.fill();X.fillStyle='#fff';rr(-120,-230,240,100,16);X.fill();X.fillStyle='#e84393';rr(-120,-245,240,26,12);X.fill();
+ [-60,0,60].forEach((cx,i)=>{X.fillStyle='#5ad1ff';X.fillRect(cx-6,-310,12,70);glow(cx,-322,40,'rgba(255,200,80,A)',.8);X.fillStyle='#ffcf4d';X.beginPath();X.ellipse(cx,-322+Math.sin(t*12+i)*2,8,16,0,0,7);X.fill()});
+ X.fillStyle='#fff';X.font='900 70px Heebo';X.textAlign='center';X.textBaseline='middle';X.direction='ltr';X.fillText('18',0,-180);X.restore()}
+function bankMsg(y,amt,s,k){X.save();X.translate(540,y);X.scale(s*L(.8,1,k),s*L(.8,1,k));X.globalAlpha=k;X.fillStyle='#fff';rr(-420,-150,840,300,40);X.fill();X.fillStyle='#1d5bbf';X.beginPath();X.arc(-320,-60,50,0,7);X.fill();X.fillStyle='#fff';X.font='900 50px Heebo';X.textAlign='center';X.textBaseline='middle';X.direction='rtl';X.fillText('בנק',-320,-56);
+ X.fillStyle='#555';X.font='700 40px Heebo';X.textAlign='right';X.fillText('הודעה מהבנק · עכשיו',380,-80);X.fillStyle='#111';X.font='900 46px Heebo';X.fillText('הופקד לחשבונך:',380,-10);X.fillStyle='#14a44d';X.font='900 96px Heebo';X.textAlign='center';X.direction='ltr';X.fillText(amt,0,80);X.restore()}
+function penthouse(x,y,s){X.save();X.translate(x,y);X.scale(s,s);X.fillStyle='#8fb1cf';X.fillRect(-160,-900,320,900);for(let r=0;r<14;r++)for(let c=0;c<4;c++){X.fillStyle='rgba(255,230,160,.8)';X.fillRect(-130+c*70,-860+r*62,44,40)}
+ X.fillStyle='#ffd34d';X.fillRect(-180,-960,360,60);glow(0,-930,300,'rgba(255,210,90,A)',.5);X.restore()}
+function sofaOld(x,y,s){X.save();X.translate(x,y);X.scale(s,s);X.fillStyle='#6b4a3a';rr(-260,-160,520,120,30);X.fill();rr(-280,-60,560,80,20);X.fill();X.fillStyle='#4a3226';rr(-300,-120,60,140,20);X.fill();rr(240,-120,60,140,20);X.fill();X.restore()}
+function coinStack(x,y,n,s){for(let i=0;i<n;i++){X.fillStyle=i%2?'#e0a83a':'#f0bf50';X.beginPath();X.ellipse(x,y-i*14*s,46*s,14*s,0,0,7);X.fill();X.strokeStyle='#a87818';X.lineWidth=3;X.stroke()}}
+function doorFrame(x,y,s,open){X.save();X.translate(x,y);X.scale(s,s);X.fillStyle='#3a2a1c';X.fillRect(-140,-520,280,520);X.fillStyle='#0d0907';X.fillRect(-120,-500,240,500);X.save();X.translate(-120,0);X.scale(1-open*.8,1);X.fillStyle='#8a6a48';X.fillRect(0,-500,240,500);X.fillStyle='#d9b27a';X.beginPath();X.arc(200,-250,12,0,7);X.fill();X.restore();X.restore()}
+const DAD=(x,y,s,ex,t,o)=>person(x,y,s,Object.assign({shirt:'#5d6d7e',pants:'#34495e',skin:'#e8b98f',hair:'#9a9a9a',bald:true,ex:ex},o||{}),t);
+const MOM=(x,y,s,ex,t,o)=>person(x,y,s,Object.assign({shirt:'#a05a8a',skin:'#f2c29a',hair:'#8a8a8a',long:true,ex:ex},o||{}),t);
+const ME=(x,y,s,ex,t,o)=>person(x,y,s,Object.assign({shirt:'#2e86de',skin:'#f2c29a',hair:'#2b1d14',ex:ex},o||{}),t);
+SC.cover=(t,d)=>{const g=X.createLinearGradient(0,0,0,H);g.addColorStop(0,'#0f3d2a');g.addColorStop(1,'#04140d');X.fillStyle=g;X.fillRect(0,0,W,H);
+ for(let i=0;i<24;i++){X.fillStyle=i%2?'rgba(60,255,150,.07)':'rgba(0,0,0,0)';X.beginPath();X.moveTo(540,1150);const a=i/24*Math.PI*2,b=(i+1)/24*Math.PI*2;X.lineTo(540+Math.cos(a)*2500,1150+Math.sin(a)*2500);X.lineTo(540+Math.cos(b)*2500,1150+Math.sin(b)*2500);X.closePath();X.fill()}
+ SEED=8;for(let i=0;i<26;i++)bill(R()*1080,620+R()*1100+((t*120+i*40)%200),1.2+R()*.5,R()*6+t*(R()-.5));
+ ME(540,2000,2.0,'shock',t,{armL:2.6,armR:-2.6,sweat:true});
+ pill('בעולם הזה...',540,200,46,'rgba(0,0,0,.6)','#7dffb0','#7dffb0');bigText(['בגיל 18 מקבלים','את כל הכסף','של החיים'],340,104,'#fff')};
+SC.rule=(t,d)=>{roomBg(true);cake(540,1250,1.4,t);const k=E((d-1.8)/.6);if(k>0)bankMsg(560,'?,???,???',1,k);pill('פעם אחת. לכל החיים.',540,1420,46,'rgba(0,0,0,.6)','#ffd34d')};
+SC.nosalary=(t,d)=>{roomBg(false);X.save();X.translate(540,800);X.fillStyle='#fff';rr(-300,-380,600,760,20);X.fill();X.fillStyle='#222';X.font='900 64px Heebo';X.textAlign='center';X.direction='rtl';X.fillText('תלוש משכורת',0,-280);X.fillStyle='#ccc';for(let i=0;i<7;i++)X.fillRect(-220,-180+i*70,440,22);X.restore();
+ if(d>1.2){X.save();X.translate(540,800);X.rotate(-.2);X.strokeStyle='#e8212e';X.lineWidth=18;rr(-330,-110,660,220,20);X.stroke();X.fillStyle='#e8212e';X.font='900 120px Heebo';X.textAlign='center';X.textBaseline='middle';X.direction='rtl';X.fillText('בוטל',0,8);X.restore()}};
+SC.friend=(t,d)=>{sky('#0a1124','#1c2a50');stars(t);city(t);penthouse(760,GY,1);const p=person(330,GY+170,1.4,{shirt:'#f1c40f',skin:SKINS[1],hair:'#111',ex:'smile',armR:-2.4},t);
+ tag('₪30,000,000',330,560,64,'#7dffb0');if(d>3.3)pill('פנטהאוז · יום ראשון',760,500,44,'rgba(0,0,0,.7)','#ffd34d')};
+SC.sister=(t,d)=>{roomBg(true);sofaOld(540,1420,1.5);person(540,1480,1.3,{shirt:'#e84393',skin:SKINS[0],hair:'#6b4a2b',long:true,ex:'worried',armR:-1.2,itemR:()=>{X.fillStyle='#14a44d';rr(-30,120,60,40,6);X.fill()}},t);coinStack(820,1500,7,1.4);
+ tag('₪800,000',540,520,64,'#ffd34d');if(d>2.7)pill('עדיין גרה אצל ההורים',540,660,42,'rgba(0,0,0,.7)','#fff')};
+SC.turn=(t,d)=>{const g=X.createLinearGradient(0,0,0,H);g.addColorStop(0,'#0b2a1c');g.addColorStop(1,'#03100a');X.fillStyle=g;X.fillRect(0,0,W,H);glow(540,700,700,'rgba(80,255,160,A)',.25*E((d-3.3)/.6));
+ const k=E((d-3.3)/.5);if(k>0){bankMsg(700,'₪12,000,000',1.05,k);if(d<3.8){X.fillStyle=`rgba(255,255,255,${.4*(1-(d-3.3)/.5)})`;X.fillRect(0,0,W,H)}}else if(d>1.9)bankMsg(700,'...',1.05,E((d-1.9)/.3));
+ ME(540,1950,1.8,d>3.4?'shock':'neutral',t,{armL:d>3.4?2.6:.1,armR:d>3.4?-2.6:-.1});pill('עכשיו תורך',540,180,54,'rgba(0,0,0,.6)','#fff','#fff')};
+SC.dad=(t,d)=>{roomBg(false);doorFrame(820,1560,1.35,E(d/.6)*(1-E((d-2)/.6)));const kx=L(980,700,E((d-.3)/1.2));DAD(kx,1560,1.4,'worried',t,{look:-1});ME(280,1560,1.4,'neutral',t,{look:1});tag('₪12,000,000',280,420,46,'#7dffb0')};
+SC.dadsay=(t,d)=>{roomBg(false);X.fillStyle='rgba(0,0,0,.35)';X.fillRect(0,0,W,H);DAD(540,2150,2.3,'worried',t);
+ if(d>.6)pill('"קיבלנו את שלנו לפני 30 שנה"',540,300,46,'rgba(10,14,28,.88)','#fff');if(d>3.7){const k=E((d-3.7)/.4);X.save();X.globalAlpha=k;tag('נשארו: ₪4,000',540,470,72,'#ff5a5a');X.restore()}};
+SC.contrast=(t,d)=>{roomBg(false);X.fillStyle='rgba(0,0,0,.3)';X.fillRect(0,0,W,H);ME(270,1560,1.35,'worried',t,{look:1});DAD(700,1560,1.3,'worried',t,{look:-1});MOM(910,1560,1.2,'worried',t,{look:-1});
+ tag('₪12,000,000',270,460,46,'#7dffb0');tag('₪4,000',805,460,52,'#ff5a5a');X.strokeStyle='rgba(255,255,255,.25)';X.lineWidth=6;X.setLineDash([16,14]);X.beginPath();X.moveTo(540,500);X.lineTo(540,1500);X.stroke();X.setLineDash([])};
+SC.choice=(t,d)=>{sky('#0a1124','#16213f');stars(t);const k=E(d/.4);X.save();X.globalAlpha=k;pill('פרק 1',540,200,44,'#ffd34d','#111');bigText(['אתם מחליטים'],380,100,'#fff');
+ const pulse=1+.04*Math.sin(t*6);X.save();X.translate(780,860);X.scale(pulse,pulse);X.fillStyle='#14a44d';rr(-230,-170,460,340,40);X.fill();X.fillStyle='#fff';X.font='900 140px Heebo';X.textAlign='center';X.textBaseline='middle';X.fillText('1',0,-50);X.font='900 54px Heebo';X.direction='rtl';X.fillText('לתת להם חצי',0,90);X.restore();
+ X.save();X.translate(300,860);X.scale(2-pulse,2-pulse);X.fillStyle='#8a1a1a';rr(-230,-170,460,340,40);X.fill();X.fillStyle='#fff';X.font='900 140px Heebo';X.textAlign='center';X.textBaseline='middle';X.fillText('2',0,-50);X.font='900 54px Heebo';X.direction='rtl';X.fillText('לשמור הכל',0,90);X.restore();
+ bigText(['הרוב בתגובות','קובע את פרק 2 👇'],1250,72,'#ffd34d');X.restore()};
+SC.tag=(t,d)=>{sky('#0a1124','#16213f');stars(t);const k=E(d/.35);X.save();X.globalAlpha=k;bigText(['תייגו את החבר','שהיה שומר הכל 👇'],700,88,'#fff');X.restore()};
+SC.follow=(t,d)=>{sky('#0a1124','#16213f');stars(t);const k=E(d/.35);X.save();X.globalAlpha=k;const p=1+.06*Math.sin(d*7);X.save();X.translate(540,880);X.scale(p,p);X.fillStyle='#fe2c55';rr(-330,-90,660,180,90);X.fill();X.fillStyle='#fff';X.font='900 84px Heebo';X.direction='rtl';X.textAlign='center';X.textBaseline='middle';X.fillText('+ עקבו',0,6);X.restore();bigText(['כדי לא לפספס את פרק 2'],1110,62,'#fff');X.restore()};

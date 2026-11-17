@@ -1,0 +1,9 @@
+{
+  "open_series": [
+    {"slug": "money", "title": "כל הכסף של החיים", "episode": 1, "posted": "2026-11-17T12:15+02:00",
+     "tiktok": "posted from TikTok Studio (caption starts 'בעולם הזה, בגיל 18 מקבלים')", "youtube": "https://youtube.com/shorts/5iCTN8AMYnU",
+     "vote": {"1": "לתת להורים חצי", "2": "לשמור הכל"}, "result": null, "next": "episode 2 opens with 'X% מכם בחרתם…'"}
+  ],
+  "promised": ["המקלט – חלק 3 when the TikTok page reaches 500 followers (at 369 on 2026-11-16)"],
+  "reserve_scripts": ["האוטובוס האחרון"]
+}

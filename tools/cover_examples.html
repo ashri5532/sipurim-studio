@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Heebo;font-weight:900;src:url(fonts/heebo-hebrew-900-normal.woff2)}
+@font-face{font-family:Heebo;font-weight:900;src:url(fonts/heebo-latin-900-normal.woff2);unicode-range:U+0000-00FF,U+20AA}
+html,body{margin:0;background:#000}canvas{display:block}</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="lib2.js"></script><script>
+function hugeText(lines,y,sz,fill,stroke,rot){X.save();X.translate(540,y);X.rotate(rot||0);X.font=`900 ${sz}px Heebo`;X.direction='rtl';X.textAlign='center';X.textBaseline='middle';X.lineJoin='round';
+ lines.forEach((l,i)=>{const yy=i*sz*1.08;X.lineWidth=sz*.28;X.strokeStyle='#000';X.strokeText(l,0,yy+8);X.lineWidth=sz*.2;X.strokeStyle=stroke||'#000';X.strokeText(l,0,yy);X.fillStyle=Array.isArray(fill)?fill[i]:fill;X.fillText(l,0,yy)});X.restore()}
+function rays(cx,cy,c1,c2){for(let i=0;i<24;i++){X.fillStyle=i%2?c1:c2;X.beginPath();X.moveTo(cx,cy);const a=i/24*Math.PI*2,b=(i+1)/24*Math.PI*2;X.lineTo(cx+Math.cos(a)*2500,cy+Math.sin(a)*2500);X.lineTo(cx+Math.cos(b)*2500,cy+Math.sin(b)*2500);X.closePath();X.fill()}}
+function bigFace(x,y,s,ex){X.save();X.translate(x,y);X.scale(s,s);person(0,0,1,{shirt:'#2e86de',ex:ex||'shock',skin:'#f2c29a',hair:'#2b1d14',armL:2.7,armR:-2.7,sweat:true},1.3);X.restore()}
+function bigATM(x,y,s){X.save();X.translate(x,y);X.scale(s,s);X.fillStyle='#2b3547';rr(-170,-480,340,480,30);X.fill();X.fillStyle='#111';rr(-130,-440,260,170,16);X.fill();
+ glow(0,-355,200,'rgba(255,40,40,A)',.6);X.fillStyle='#ff2a3a';X.font='900 96px Heebo';X.textAlign='center';X.textBaseline='middle';X.direction='ltr';X.fillText('₪0',0,-352);
+ X.fillStyle='#0b0b0b';rr(-110,-220,220,26,12);X.fill();X.fillStyle='#3d4b63';for(let r=0;r<3;r++)for(let c=0;c<3;c++){rr(-90+c*64,-170+r*48,50,36,8);X.fill()}X.restore()}
+function arrow(x1,y1,x2,y2,c,w){X.save();X.strokeStyle='#000';X.lineWidth=w+14;X.lineCap='round';X.beginPath();X.moveTo(x1,y1);X.quadraticCurveTo((x1+x2)/2+80,(y1+y2)/2-80,x2,y2);X.stroke();X.strokeStyle=c;X.lineWidth=w;X.stroke();
+ const a=Math.atan2(y2-((y1+y2)/2-80),x2-((x1+x2)/2+80));X.translate(x2,y2);X.rotate(a);X.fillStyle='#000';X.beginPath();X.moveTo(30,0);X.lineTo(-50,-46);X.lineTo(-50,46);X.closePath();X.fill();X.fillStyle=c;X.beginPath();X.moveTo(18,0);X.lineTo(-40,-34);X.lineTo(-40,34);X.closePath();X.fill();X.restore()}
+const OPT=new URLSearchParams(location.search).get('o');
+(async()=>{await document.fonts.load('900 80px Heebo');
+if(OPT==='a'){rays(540,1150,'#ffcf2e','#ffb000');glow(540,1150,700,'rgba(255,255,255,A)',.35);
+ SEED=9;for(let i=0;i<22;i++)bill(R()*1080,700+R()*1100,1.3+R()*.6,R()*6);
+ bigATM(820,1720,1.35);bigFace(330,1980,2.25,'shock');arrow(520,1090,690,1190,'#ff2a3a',30);
+ hugeText(['כל ישראל','רצה לבנק'],250,170,['#fff','#ff2a3a'],'#000');}
+if(OPT==='b'){X.fillStyle='#0a0a0a';X.fillRect(0,0,W,H);rays(540,1250,'#2a0606','#160303');glow(540,1250,800,'rgba(255,30,30,A)',.45);
+ bank(540,1640,1.5,{crack:true,dark:true,name:'בנק'});for(let i=0;i<9;i++)person(60+i*120,1960,1.0,Object.assign(crowdP(i),{ex:i%2?'shock':'angry',armR:-2.7,armL:2.7,sweat:true}),2);
+ hugeText(['הבנק','נגמר לו','הכסף'],260,190,['#fff','#ffd400','#fff'],'#000',-0.05);}
+if(OPT==='c'){rays(540,1000,'#1d3a8a','#152c6b');glow(540,1000,700,'rgba(90,200,255,A)',.35);
+ bigATM(540,1560,1.75);bigFace(180,2050,1.9,'shock');X.save();X.scale(-1,1);bigFace(-900,2050,1.9,'angry');X.restore();
+ SEED=4;for(let i=0;i<10;i++)bill(R()*1080,620+R()*260,1.2,R()*6);
+ hugeText(['תוך 3 שעות','נגמר הכסף'],400,150,['#fff','#ffd400'],'#000');}
+if(OPT==='d'){rays(540,1100,'#0f7a3c','#0a5c2c');glow(540,1100,750,'rgba(120,255,160,A)',.35);
+ SEED=7;for(let i=0;i<26;i++)bill(R()*1080,560+R()*1200,1.3+R()*.6,R()*6);
+ X.save();X.translate(540,1060);X.rotate(-0.04);X.fillStyle='#000';rr(-380,-120,760,240,40);X.fill();X.fillStyle='#fff';rr(-370,-130,740,240,36);X.fill();
+ X.fillStyle='#0a8f45';X.font='900 64px Heebo';X.textAlign='center';X.textBaseline='middle';X.direction='rtl';X.fillText('🏦 הודעה מהבנק',0,-70);
+ X.direction='ltr';X.font='900 120px Heebo';X.fillStyle='#111';X.fillText('₪12,000,000',0,35);X.restore();
+ bigFace(540,2170,2.1,'shock');
+ X.save();X.translate(880,1480);X.rotate(0.15);X.fillStyle='#000';X.beginPath();X.arc(0,0,135,0,7);X.fill();X.fillStyle='#ff2a3a';X.beginPath();X.arc(0,0,122,0,7);X.fill();
+ X.fillStyle='#fff';X.font='900 74px Heebo';X.textAlign='center';X.textBaseline='middle';X.direction='rtl';X.fillText('1 או 2',0,4);X.restore();
+ hugeText(['בגיל 18 מקבלים','את כל הכסף','של החיים'],390,138,['#fff','#ffd400','#ffd400'],'#000');}
+vignette();window.DONE=1})();
+</script></body></html>

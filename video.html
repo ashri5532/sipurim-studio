@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Heebo;font-weight:900;src:url(engine/fonts/heebo-hebrew-900-normal.woff2)}
+@font-face{font-family:Heebo;font-weight:700;src:url(engine/fonts/heebo-hebrew-700-normal.woff2)}
+@font-face{font-family:Heebo;font-weight:900;src:url(engine/fonts/heebo-latin-900-normal.woff2);unicode-range:U+0000-00FF,U+20AA,U+2013-2014}
+@font-face{font-family:Heebo;font-weight:700;src:url(engine/fonts/heebo-latin-700-normal.woff2);unicode-range:U+0000-00FF,U+20AA}
+html,body{margin:0;background:#000}canvas{display:block}</style></head><body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="engine/lib2.js"></script><script>const EP=new URLSearchParams(location.search).get("ep");document.write(`<script src="episodes/${EP}/scenes.js"><\/script><script src="episodes/${EP}/timeline.js"><\/script>`)</script><script>
+const clean=w=>w.replace(/[",.:?!]/g,'').replace(/\.\.\./g,'');
+const GR=[];CH.forEach(([txt,a,b])=>{const ws=txt.split(' ');const lens=ws.map(w=>Math.max(1,clean(w).length));const tot=lens.reduce((x,y)=>x+y,0);let acc=0;const wt=ws.map((w,i)=>{const s=a+(b-a)*acc/tot;acc+=lens[i];return [clean(w),s]});
+ for(let i=0;i<wt.length;){let j=i,len=0;while(j<wt.length&&j-i<3&&len+wt[j][0].length<=13){len+=wt[j][0].length+1;j++;if(/[,.:?!]$/.test(ws[j-1]))break}if(j===i)j++;GR.push({w:wt.slice(i,j),end:(j<wt.length?wt[j][1]:b)+.15});i=j}});
+function drawCap(t){let g=null;for(const G of GR){if(t>=G.w[0][1]-.05&&t<G.end+.1)g=G}if(!g)return;const ws=g.w;const pop=E((t-ws[0][1]+.05)/.1);X.save();X.translate(540,1660);X.scale(L(.8,1,pop),L(.8,1,pop));X.font='900 86px Heebo';X.direction='rtl';X.textBaseline='middle';X.lineJoin='round';
+ const sp=24,wd=ws.map(w=>X.measureText(w[0]).width);const tot=wd.reduce((a,b)=>a+b,0)+sp*(ws.length-1);let act=0;ws.forEach((w,k)=>{if(t>=w[1]-.05)act=k});X.fillStyle='rgba(0,0,0,.6)';rr(-tot/2-34,-66,tot+68,132,30);X.fill();
+ let x=tot/2;ws.forEach((w,k)=>{X.textAlign='right';X.lineWidth=16;X.strokeStyle='#000';X.strokeText(w[0],x,4);X.fillStyle=k===act?'#ffe14d':'#fff';X.fillText(w[0],x,4);x-=wd[k]+sp});X.restore()}
+window.render=T=>{const t=T-OFF;X.setTransform(1,0,0,1,0,0);X.fillStyle='#000';X.fillRect(0,0,W,H);
+ let i=0;for(let k=0;k<TL.length;k++)if(t>=TL[k][1])i=k;const a=Math.max(0,TL[i][1]),b=TL[i+1]?TL[i+1][1]:END,d=t-a,u=cl(d/(b-a));
+ X.save();const z=1+.04*u;X.translate(540,960);X.scale(z,z);X.translate(-540,-960);SC[TL[i][0]](t,Math.max(0,d));X.restore();vignette();
+ const fin=cl(d/.18),fout=cl((b-t)/.18);const f=Math.min(i===0?1:fin,fout);if(f<1){X.fillStyle=`rgba(0,0,0,${1-f})`;X.fillRect(0,0,W,H)}
+ if(t<CAP_END)drawCap(t);return true};
+(async()=>{await document.fonts.load('900 80px Heebo');await document.fonts.load('700 40px Heebo');await document.fonts.load('900 80px Heebo','0123');window.render(0);window.READY=true})();
+</script></body></html>
