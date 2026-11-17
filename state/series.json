@@ -21,5 +21,20 @@
  "reserve_scripts": [
   "האוטובוס האחרון",
   "button-ep1 (הכפתור ששומע מחשבות, בעולם הזה + series ep1) — fully built in episodes/button-ep1, hold until money series closes and format rotation allows"
+ ],
+ "standalone": [
+  {
+   "slug": "redlight",
+   "title": "הרמזור האדום",
+   "format": "street/police drama (3)",
+   "posted": "2026-11-17T20:00+02:00",
+   "tiktok": "https://www.tiktok.com/@sipurim.shel.achim/video/7709201995256614152",
+   "youtube": "https://www.youtube.com/watch?v=uNMV2-w3F-I",
+   "vote": {
+    "1": "עוצר אותו",
+    "2": "נותן לו לנסוע"
+   },
+   "host": "first video with האח"
+  }
  ]
 }
