@@ -3,16 +3,37 @@
   {
    "slug": "money",
    "title": "כל הכסף של החיים",
-   "episode": 1,
-   "posted": "2026-11-17T12:15+02:00",
-   "tiktok": "posted from TikTok Studio (caption starts 'בעולם הזה, בגיל 18 מקבלים')",
-   "youtube": "https://youtube.com/shorts/5iCTN8AMYnU",
-   "vote": {
-    "1": "לתת להורים חצי",
-    "2": "לשמור הכל"
-   },
-   "result": null,
-   "next": "episode 2 opens with 'X% מכם בחרתם…'"
+   "episode": 2,
+   "next": "episode 3 opens with 'X% מכם בחרתם…' (count ep2 TikTok votes after 18h)",
+   "episodes": [
+    {
+     "episode": 1,
+     "posted": "2026-11-17T12:15+02:00",
+     "tiktok": "https://www.tiktok.com/@sipurim.shel.achim/video/7709082078456843526",
+     "youtube": "https://youtube.com/shorts/5iCTN8AMYnU",
+     "vote": {
+      "1": "לתת להורים חצי",
+      "2": "לשמור הכל"
+     },
+     "result": {
+      "1": 84,
+      "2": 3,
+      "pct_1": 97,
+      "counted": "2026-11-18 08:50 IST"
+     }
+    },
+    {
+     "episode": 2,
+     "posted": "2026-11-18T13:00+02:00",
+     "tiktok": "scheduled 13:00 via vidIQ (postId 85a0637c-410a-4a99-b058-e07222487208)",
+     "youtube": "https://www.youtube.com/watch?v=Jpt21MZSHrQ",
+     "vote": {
+      "1": "נותן לו מיליון",
+      "2": "סוגר לו את הדלת"
+     },
+     "result": null
+    }
+   ]
   }
  ],
  "promised": [
