@@ -16,6 +16,13 @@ Channel: TikTok **@sipurim.shel.achim** ("סיפורים של אחים 🔑"), Y
 - Hooks that win in this market: "בעולם הזה / בעיר הזו [חוק מוזר]…", choose-your-own-adventure, "52% מכם בחרו…".
 - Explainers/news-style videos were weak. Shares are our weak point → always include a "תייגו את החבר ש…" beat.
 - End sequence: vote card → "תייגו…" → "+ עקבו כדי לא לפספס את פרק X".
+- **Weekly analyst 2026-11-22 (TikTok, 10 videos, 11-09→11-18):**
+  - Top 4 are ALL standalone "מה אם / בעולם הזה" supernatural-rule premises at 60–70s: money-above-head 41K, shelter 34K, lies-above-head 26K, own-voice-calls 23K. Realistic drama (redlight 2.9K, mikolet 4.9K) and part 2s (8.3K, 1.6K) are the bottom. → Default to a magical-rule premise; realistic/family stories are the exception, not the rotation.
+  - Sequels lose 60–90% of ep1's audience even with "X% מכם בחרתם". Series = max 2 episodes, and only after an ep1 that beat 20K.
+  - The 1/2 vote at the end is what drives comments (140–235 per video vs 13–15 without). Keep it on every video.
+  - Explainer "כל ישראל לבנק" (102s) did 16.5K with the most shares (42) — not weak after all; one per week is fine.
+  - Views dropped after 11-17 (host האח + realistic topics) and nothing was posted 11-19→11-21. A gap of days hurts more than an average video — post daily.
+  - YouTube: 3 shorts, 1.0–1.4K each, 7 subs. Too small to conclude anything.
 
 ## Variety — Ashri wants NEW things, not the same video every day
 Rotate formats; never the same format two days in a row (check state/log.md). Keep the 1/2 vote ending in all of them.
