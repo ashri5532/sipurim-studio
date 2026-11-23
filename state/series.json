@@ -35,11 +35,55 @@
      "tiktok_status": "REMOVED from TikTok public feed (noticed 2026-11-21/22); reason unknown — Ashri to check Account status. YouTube still live. Votes not counted."
     }
    ]
+  },
+  {
+   "slug": "shelter",
+   "title": "המקלט",
+   "episode": 3,
+   "next": "the finale (הסוף) opens with 'X% מכם בחרתם…' — count pt3 TikTok votes after 18h. Last episode of this series.",
+   "episodes": [
+    {
+     "episode": 1,
+     "posted": "2026-11-14",
+     "tiktok": "https://www.tiktok.com/@sipurim.shel.achim/video/7708091934278946100",
+     "vote": {
+      "1": "לדפוק",
+      "2": "לרוץ למקלט"
+     }
+    },
+    {
+     "episode": 2,
+     "posted": "2026-11-15",
+     "tiktok": "https://www.tiktok.com/@sipurim.shel.achim/video/7708459800832593153",
+     "vote": {
+      "1": "לספר לו",
+      "2": "לא לספר"
+     },
+     "result": {
+      "1": 11,
+      "2": 0,
+      "pct_1": 100,
+      "counted": "2026-11-23"
+     }
+    },
+    {
+     "episode": 3,
+     "slug": "shelter-pt3",
+     "posted": "2026-11-23T20:00+02:00",
+     "tiktok": "https://www.tiktok.com/@sipurim.shel.achim/video/7711427693362908434",
+     "youtube": "https://www.youtube.com/watch?v=yDX4Dr2on0Y",
+     "vote": {
+      "1": "יורד איתו למקלט",
+      "2": "נשאר עם אמא"
+     },
+     "result": null,
+     "ai_label": true,
+     "length_s": 74.6
+    }
+   ]
   }
  ],
- "promised": [
-  "המקלט – חלק 3 — DUE NOW: TikTok passed 500 followers (705 on 2026-11-22). Original: 7708091934278946100 (34.4K)."
- ],
+ "promised": [],
  "reserve_scripts": [
   "האוטובוס האחרון",
   "button-ep1 (הכפתור ששומע מחשבות, בעולם הזה + series ep1) — fully built in episodes/button-ep1, hold until money series closes and format rotation allows"
