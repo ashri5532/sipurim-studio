@@ -83,7 +83,12 @@
    ]
   }
  ],
- "promised": [],
+ "promised": [
+  {
+   "for": "2026-11-25",
+   "what": "Ashri asked (11-24): tomorrow's video = 'יום אחד התעוררתי…' style (POV wake-up premise, format 6, keep 1/2 vote). Ashri uploads it HIMSELF from his phone: produce it, send the final.mp4 + caption + title + time, do NOT publish via vidIQ at all (no draft, no publish), even if he says 'מאשר'. Ask whether he wants manual upload for future videos too."
+  }
+ ],
  "reserve_scripts": [
   "האוטובוס האחרון",
   "button-ep1 (הכפתור ששומע מחשבות, בעולם הזה + series ep1) — fully built in episodes/button-ep1, hold until money series closes and format rotation allows"
