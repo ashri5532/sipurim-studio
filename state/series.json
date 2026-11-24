@@ -115,6 +115,21 @@
     "2": "מבטל ועובר לגור איתו"
    },
    "ai_label": true
+  },
+  {
+   "slug": "memory-sale",
+   "title": "בבלאק פריידיי משלמים בזיכרון",
+   "format": "בעולם הזה (1)",
+   "theme": "Black Friday this week / only 13% of deals are real discounts",
+   "posted": "2026-11-24T20:00+02:00",
+   "tiktok": "scheduled via vidIQ for 2026-11-24 20:00 IST (post 3acd8e43-5d85-449c-ba22-43b1d045cccb) — link pending",
+   "youtube": "https://www.youtube.com/watch?v=Wnof1oCTeHM",
+   "vote": {
+    "1": "משלם ולוקח את הדירה",
+    "2": "משאיר את הדירה ושומר את סבא"
+   },
+   "ai_label": true,
+   "length_s": 74.3
   }
  ]
 }
