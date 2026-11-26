@@ -40,7 +40,7 @@
    "slug": "shelter",
    "title": "המקלט",
    "episode": 3,
-   "next": "the finale (הסוף) opens with 'X% מכם בחרתם…' — count pt3 TikTok votes after 18h. Last episode of this series.",
+   "next": "finale (shelter-end) built 2026-11-26, awaiting Ashri approval",
    "episodes": [
     {
      "episode": 1,
@@ -76,7 +76,13 @@
       "1": "יורד איתו למקלט",
       "2": "נשאר עם אמא"
      },
-     "result": null,
+     "result": {
+      "1": 17,
+      "2": 13,
+      "pct_1": 57,
+      "note": "3 more wrote 'mom comes too'",
+      "counted": "2026-11-26"
+     },
      "ai_label": true,
      "length_s": 74.6
     }
