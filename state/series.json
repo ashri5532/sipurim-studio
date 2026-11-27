@@ -141,6 +141,21 @@
    },
    "ai_label": true,
    "length_s": 74.3
+  },
+  {
+   "slug": "odds",
+   "title": "בעולם הזה רואים את הסיכוי",
+   "format": "בעולם הזה (1)",
+   "theme": "'see the odds of anything' outlier (102K) + 'no chance' cost-of-living mood",
+   "posted": "2026-11-27T20:00+02:00",
+   "tiktok": "scheduled via vidIQ 20:00 IST (postId a2263815-2c6b-4a42-8d26-ba273e919e3e) — link after it goes out",
+   "youtube": "https://www.youtube.com/watch?v=5VN_B2oknzY",
+   "vote": {
+    "1": "מדביק ומפסיק לראות מספרים",
+    "2": "ממשיך לראות וסומך על האחוזים"
+   },
+   "ai_label": true,
+   "length_s": 73.9
   }
  ]
 }
