@@ -156,6 +156,19 @@
    },
    "ai_label": true,
    "length_s": 73.9
+  },
+  {
+   "slug": "future-msg",
+   "title": "הודעה מעצמך מעוד שנה",
+   "format": "POV thriller (6)",
+   "theme": "end of year / message from future self",
+   "posted": null,
+   "status": "built 2026-11-28, awaiting Ashri approval",
+   "vote": {
+    "1": "מקשיב לעצמך, קם והולך",
+    "2": "מקשיב לבן שלך ומדבר איתה"
+   },
+   "length_s": 65.7
   }
  ]
 }
